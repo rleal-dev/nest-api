@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
+import { PermissionsModule } from './permissions/permissions.module';
+import { ProjectsModule } from './projects/projects.module';
 
 @Module({
   imports: [
@@ -16,6 +19,9 @@ import { UsersModule } from './users/users.module';
       dropSchema: true
     }),
     UsersModule,
+    RolesModule,
+    PermissionsModule,
+    ProjectsModule,
   ],
 })
 export class AppModule {}
